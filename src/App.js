@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import AvailableCurrencyList from './components/AvailableCurrencyList';
+import DispenceCurrency from './components/DispenceCurrency'
 
 function App() {
+  const [renderAvailable, setRenderAvailable]  = useState(false);
+  const setRender = () =>{
+    console.log('main');
+    setRenderAvailable(!renderAvailable);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AvailableCurrencyList renderAvailable={renderAvailable}/>
+      <DispenceCurrency setRenderAvailable={i => {setRender()}} />
     </div>
   );
 }

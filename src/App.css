@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -13,8 +13,12 @@
   }
 }
 
+.Available-currency {
+  padding-top: 5px;
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: #cad3d1;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
